@@ -1,45 +1,46 @@
 body {
-    background-image: url('paws_bg.jpg');
-    font-family: 'Caveat';
+  background-image: url("paws_bg.jpg");
+  font-family: "Caveat";
+}
+img {
+  display: inline;
+}
 
-  }
-    img{
-        display: inline;
-    }
+#male {
+  background-color: aqua;
+}
 
+#female {
+  background-color: pink;
+}
 
-
-
-    /* ul{
+/* ul{
         display: inline-block;
         font-size: 20px;
         justify-content: space-between;
     } */
-    
-li{
-    display: inline-block;
-    font-size: 20px;
-    justify-content: space-between;
+
+li {
+  display: inline-block;
+  font-size: 20px;
+  justify-content: space-between;
 }
 
-p{
-    font-size: 20px;
-    font-weight: 600;
-    display: inline-flex;
+p {
+  font-size: 20px;
+  font-weight: 600;
+  display: inline-flex;
 }
 
-
-a{
-    display: inline;
-    text-decoration: none;
+a {
+  display: inline;
+  text-decoration: none;
 }
 a:visited {
-    color: black;
-  }
-  
-  /* mouse over link */
-  a:hover {
-    color: blue;
-  }
-  
- 
+  color: black;
+}
+
+/* mouse over link */
+a:hover {
+  color: blue;
+}

@@ -1,33 +1,50 @@
 // First Get grabs names of pokemon
 // Second get uses those names to create a mega array of pokemon
+
+let names;
 $(document).ready(function () {
-  let names;
   $.get(
     "https://randomuser.me/api/?results=20",
     function (res) {
       //console.log(res);
       names = res.results;
-      console.log(names);
-
-      for (i = 0; i < names.length; i++) {
-        draw(names[i]);
-      }
+      //      console.log(names);
+      //   for (i = 0; i < names.length; i++) {
+      //     draw(names[i]);
+      //   }
     },
     "json"
   );
 });
 
-$("#alpha").click(function () {
+$("#start").click(function () {
+  for (i = 0; i < names.length; i++) {
+    draw(names[i]);
+  }
+  console.log(names);
+});
+
+$("#women").click(function () {
+  $("#sausage").hide();
+  $("#clam").show();
+  console.log(names);
+});
+
+$("#men").click(function () {
+  $("#sausage").show();
+  $("#clam").hide();
   console.log(names);
 });
 
 function draw(foo) {
   var htmlText = "";
-  console.log(foo);
-  console.log(foo.picture.medium);
+  //  console.log(foo);
+  //  console.log(foo.picture.medium);
   imgurl = foo.picture.medium;
+  sex = foo.gender;
+  let bodytype;
 
-  htmlText += `<div class="col-12 col-lg-6 bg-secondary border border-danger rounded p-2 mb-2" >
+  htmlText += `<div class="border border-danger rounded p-2 mb-2" id="${sex}">
 
    <div class="row">
        <div class="col-4">
@@ -39,5 +56,10 @@ function draw(foo) {
        </div>
    </div> 
   </div>`;
-  $("#showroom").append(htmlText);
+
+  if (sex == "male") {
+    $("#sausage").append(htmlText);
+  } else {
+    $("#clam").append(htmlText);
+  }
 }
