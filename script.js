@@ -3,12 +3,7 @@ $(document).ready(function () {
   $.get(
     "https://randomuser.me/api/?results=20",
     function (res) {
-      //console.log(res);
       names = res.results;
-      //      console.log(names);
-      //   for (i = 0; i < names.length; i++) {
-      //     draw(names[i]);
-      //   }
     },
     "json"
   );
