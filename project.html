@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
    <head>
-      <title>Pet Shelter</title>
+      <title>Gotta Slay 'em All!</title>
       <meta charset="UTF-8">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -14,44 +14,19 @@
    <body>
       <div class="container">
        
-       <div class="row bg-light p-3 border border-danger rounded mb-4">
-           <div class="col-12 col-sm-4">
-               <h1>Reckless Encounters</h1>
+       <div class="row bg-dark text-danger p-3 border border-danger rounded mb-4">
+           <div class="col-12">
+               <h1>Murder Emporium - Choose your Victim!</h1>
            </div>
-           <div class="col-12 col-sm-8">
-               <ul>
-                   <li><a href="https://www.youtube.com/watch?v=0kccWLLeI1w"><p>Mission Statement   </p></a></li>
-                   <li><a href="https://www.youtube.com/watch?v=0kccWLLeI1w"><p>Contact Us   </p></a></li>
-                   <li><a href="https://www.youtube.com/watch?v=0kccWLLeI1w" class="btn btn-dark btn-lg text-light" role="button" aria-disabled="true">Donate</a>
-                   </li>
-               </ul>
+           <div class="col-12">
+            <button type="button" class="btn btn-primary btn-lg btn-block" id="start">Get Started</button>
+            <button type="button" class="btn btn-primary btn-lg" id="men">Men</button>
+            <button type="button" class="btn btn-primary btn-lg" id="women">Women</button>
+            <button type="button" class="btn btn-primary btn-lg" id="either">Either</button>
+
            </div>
 
            
-            <div class="col-12 col-sm-4">
-                <p class="font-effect-outline">I'm looking For...</p>
-                <img src="collar.png" alt="collar" style="height: 30px; width: 30px;">
-                    <select name="breed" id="breed">
-                        <option value="all">Any</option>
-                        <option value="dog">Dog</option>
-                        <option value="cat">Cat</option>
-                        <option value="rodent">Rodent</option>
-                      
-                      </select>
-            </div>
-            
-            <div class="col-12 col-sm-8">
-                <p>Nearby...</p>
-                
-                    <form class="form-inline">
-                        <img src="marker.jpg" alt="pin" style="height: 30px; width: 30px;">
-                        <input class="form-control" type="search" placeholder="Zipcode" aria-label="Search">
-                        <button class="btn btn-outline-white" type="submit">Search</button>
-                    </form>
-            </div>
-            <div class="button" id="start">Get Started__</div>
-            <div class="button" id="men">Men__</div>
-            <div class="button" id="women">Women__</div>
 
                 
                
@@ -59,8 +34,8 @@
         
 
         <div class="row" id="showroom">
-            <div class="col-12 col-lg-6" id="sausage"></div>
-            <div class="col-12 col-lg-6" id="clam"></div>
+            <div class="col" id="sausage"></div>
+            <div class="col" id="clam"></div>
 
 
             

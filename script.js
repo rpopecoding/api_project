@@ -1,6 +1,3 @@
-// First Get grabs names of pokemon
-// Second get uses those names to create a mega array of pokemon
-
 let names;
 $(document).ready(function () {
   $.get(
@@ -15,44 +12,62 @@ $(document).ready(function () {
     },
     "json"
   );
+  $("#women").hide();
+  $("#men").hide();
+  $("#either").hide();
 });
 
 $("#start").click(function () {
   for (i = 0; i < names.length; i++) {
     draw(names[i]);
   }
-  console.log(names);
+  $(this).slideUp();
+  $("#women").slideDown();
+  $("#men").slideDown();
+  $("#either").slideDown();
 });
 
 $("#women").click(function () {
   $("#sausage").hide();
   $("#clam").show();
-  console.log(names);
 });
 
 $("#men").click(function () {
   $("#sausage").show();
   $("#clam").hide();
-  console.log(names);
+});
+
+$("#either").click(function () {
+  $("#sausage").show();
+  $("#clam").show();
 });
 
 function draw(foo) {
   var htmlText = "";
-  //  console.log(foo);
-  //  console.log(foo.picture.medium);
+  var address_line_1 = "";
+  var address_line_2 = "";
+
   imgurl = foo.picture.medium;
   sex = foo.gender;
-  let bodytype;
+
+  address_line_1 += `${foo.location.street.number}`;
+  address_line_1 += " ";
+  address_line_1 += `${foo.location.street.name}`;
+
+  address_line_2 += `${foo.location.city}`;
+  address_line_2 += ", ";
+  address_line_2 += `${foo.location.country}`;
 
   htmlText += `<div class="border border-danger rounded p-2 mb-2" id="${sex}">
 
    <div class="row">
        <div class="col-4">
-           <img src="${imgurl}" alt="computer" height="120px" width="120px" class="border border-dark rounded">
+           <img src="${imgurl}" alt="computer" class="border border-dark rounded">
        </div>
        <div class="col-8 text-center">
            <h2>${foo.name.first} ${foo.name.last}</h2>
-           <p>Every link on this page will lead to my video description of my code</p>
+           <p>${address_line_1}</p>
+           <p>${address_line_2}</p>
        </div>
    </div> 
   </div>`;

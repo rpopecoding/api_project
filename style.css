@@ -1,5 +1,5 @@
 body {
-  background-image: url("paws_bg.jpg");
+  background-image: url("knives_bg.jpg");
   font-family: "Caveat";
 }
 img {
@@ -7,40 +7,20 @@ img {
 }
 
 #male {
-  background-color: aqua;
+  background-color: skyblue;
 }
 
 #female {
   background-color: pink;
 }
 
-/* ul{
-        display: inline-block;
-        font-size: 20px;
-        justify-content: space-between;
-    } */
+.thumb{
+    height="120px" width="120px"
 
-li {
-  display: inline-block;
-  font-size: 20px;
-  justify-content: space-between;
 }
 
 p {
   font-size: 20px;
   font-weight: 600;
-  display: inline-flex;
 }
 
-a {
-  display: inline;
-  text-decoration: none;
-}
-a:visited {
-  color: black;
-}
-
-/* mouse over link */
-a:hover {
-  color: blue;
-}
